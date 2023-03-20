@@ -32,7 +32,7 @@ supplyChanges.push(25)
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.' 
 console.log('6. Showing supplyChanges...');
-for (i = 0; i < supplyChanges.length; i++) {
+for (let i = 0; i < supplyChanges.length; i++) {
     if (supplyChanges[i] > 0) {
         console.log(`Added ${supplyChanges[i]} parts.`);
     } else if (supplyChanges[i] == 0) {
@@ -46,7 +46,7 @@ for (i = 0; i < supplyChanges.length; i++) {
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop. 
 console.log('7. Showing supplyChanges with "for of" loop');
-for ( supply of supplyChanges) {
+for (let supply of supplyChanges) {
     if (supply > 0) {
         console.log(`Added ${supply} parts.`);
     } else if (supply == 0) {
@@ -60,7 +60,7 @@ for ( supply of supplyChanges) {
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
 let totalSupply = 0;
-for (supply of supplyChanges) {
+for (let supply of supplyChanges) {
     totalSupply += supply;
 }
 console.log('The total supply is', totalSupply);
@@ -72,8 +72,8 @@ console.log('The total supply is', totalSupply);
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
-index = 1;
-boxCount = 0;
+let index = 1;
+let boxCount = 0;
 while (index < 572) {
     if ( index % 7 == 0) {
         boxCount++;
